@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <title>Parfum Elegan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo">AMBUNECH</h1>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+      <nav class="navbar" id="navbar">
+        <a href="#about">About</a>
+        <a href="#produk">Produk</a>
+        <a href="#contact">Contact</a>
+        <a href="#beli" class="btn-nav" title="Beli">🛒</a>
+      </nav>
+    </div>
+  </header>
+
+ <section id="about" class="section about fade-in">
+  <div class="container about-container">
+    <div class="about-text">
+      <h3>THANKSGOD</h3>
+      <p class="subtitle">Rasa Syukur yang Mendalam</p>
+      <p>
+        Di balik setiap tetes <strong>THANKSGOD</strong>, tersimpan kisah tentang keberanian, pencapaian, dan rasa syukur yang tak selalu bisa diucapkan. Parfum ini lahir bukan sekadar dari perpaduan wewangian, melainkan dari momen-momen kemenangan, doa yang dijawab, dan langkah besar dalam hidup.
+      </p>
+      <p>
+        Dikemas dalam botol hitam nan elegan, dengan desain minimalis yang kuat dan tenang, <strong>THANKSGOD</strong> memancarkan keanggunan serta ketegasan. Perpaduan aroma kayu <em>oud</em> yang hangat, sentuhan <em>amber</em> yang dalam, dan citrus yang menyegarkan menjadikannya pilihan sempurna bagi mereka yang menghargai setiap harinya sebagai anugerah.
+      </p>
+      <p>
+        Ini bukan hanya parfum. Ini adalah simbol.  
+        Sebuah pengingat bahwa kamu telah melalui begitu banyak hal—dan kamu layak merayakan diri sendiri.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="fotostudio.jpg" alt="Tentang Produk" />
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Konten lainnya tetap sama -->
+  <section id="produk" class="section produk fade-in">
+    <div class="container">
+      <h3>Produk</h3>
+      <div class="produk-grid">
+        <!-- Produk A -->
+        <div class="card">
+          <img src="eternalharmony.jpg" alt="Parfum A">
+          <h4>ETERNAL HARMONY</h4>
+          <p>Floral romantis yang memikat.</p>
+          <span class="price">Rp 150.000</span>
+          <button class="btn" onclick="openModal('modalA')">Lihat Detail</button>
+        </div>
+
+        <!-- Produk B -->
+        <div class="card">
+          <img src="fotohutan.jpg" alt="Parfum B">
+          <h4>THANKSGOD</h4>
+          <p>Aroma maskulin dengan kayu manis.</p>
+          <span class="price">Rp 180.000</span>
+          <button class="btn" onclick="openModal('modalB')">Lihat Detail</button>
+        </div>
+
+        <!-- Produk C -->
+        <div class="card">
+          <img src="eternalecho.png" alt="Parfum C">
+          <h4>Eternal Echo</h4>
+          <p>Vanilla citrus yang segar.</p>
+          <span class="price">Rp 160.000</span>
+          <button class="btn" onclick="openModal('modalC')">Lihat Detail</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS -->
+    <div id="modalA" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modalA')">&times;</span>
+        <h3>Eternal Harmony</h3>
+        <img src="eternalharmony.jpg" alt="Parfum A">
+        <p>Parfum ETERNAL HARMONY memiliki aroma floral lembut, cocok untuk wanita aktif dan percaya diri. Tahan hingga 12 jam.</p>
+      </div>
+    </div>
+
+    <div id="modalB" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modalB')">&times;</span>
+        <h3>THANKSGOD</h3>
+        <img src="fotohutan.jpg" alt="Parfum B">
+        <p>Parfum THANKSGOD hadir dengan aroma maskulin dan kayu manis yang elegan. Ideal untuk acara formal.</p>
+      </div>
+    </div>
+
+    <div id="modalC" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modalC')">&times;</span>
+        <h3>ETERNAL ECHO</h3>
+        <img src="ETERNALEC.png" alt="Parfum C">
+        <p>Parfum ETERNAL ECHO  menyegarkan dengan campuran vanilla dan citrus, cocok untuk siang hari dan cuaca tropis.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h3>Contact</h3>
+      <p>Email: parfum@elegan.com</p>
+      <p>WhatsApp: 081779519586</p>
+    </div>
+  </section>
+<section id="beli" class="section beli fade-in">
+  <div class="container">
+    <h3>Form Pemesanan</h3>
+    <form id="wa-form" class="order-form">
+      <input type="text" id="nama" placeholder="Nama Lengkap" required />
+      <input type="tel" id="telepon" placeholder="Nomor WhatsApp" required />
+      
+      <select id="produk" required>
+        <option value="">Pilih Produk</option>
+        <option value="Parfum eternal harmony">Parfum eternal harmony</option>
+        <option value="Parfum THANKSGOD">Parfum THANKSGOD</option>
+        <option value="Parfum eternal echo">Parfum eternal echo</option>
+      </select>
+      
+      <input type="number" id="qty" placeholder="Jumlah (Qty)" min="1" required />
+
+      <select id="metode" required>
+        <option value="">Pilih Metode Pembayaran</option>
+        <option value="Transfer BCA">Transfer BCA</option>
+        <option value="Transfer Mandiri">Transfer Mandiri</option>
+        <option value="COD (Bayar di Tempat)">COD (Bayar di Tempat)</option>
+      </select>
+
+      <textarea id="alamat" placeholder="Alamat Pengiriman" required></textarea>
+      <button type="submit" class="btn">Kirim Pesanan</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.getElementById("wa-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var nama = document.getElementById("nama").value;
+    var telepon = document.getElementById("telepon").value;
+    var produk = document.getElementById("produk").value;
+    var qty = document.getElementById("qty").value;
+    var metode = document.getElementById("metode").value;
+    var alamat = document.getElementById("alamat").value;
+
+    var nomorWa = "6281779519586"; // Ganti dengan nomor Anda
+
+    var pesan = `Halo! Saya ingin memesan:\n\nNama: ${nama}\nNomor WhatsApp: ${telepon}\nProduk: ${produk}\nJumlah: ${qty}\nMetode Pembayaran: ${metode}\nAlamat: ${alamat}`;
+
+    var url = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 AMBUNECH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    // Tutup modal jika klik di luar modal-content
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+
+    // Toggle hamburger menu
+    function toggleMenu() {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
